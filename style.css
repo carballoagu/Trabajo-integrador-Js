@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,500;0,6..12,800;1,6..12,200;1,6..12,700&family=Raleway:ital,wght@0,300;0,600;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: black;
+    
+}
+.nav{
+    background-color: #0b090a;
+  
+}
+.logo{
+    height: 150px;
+    margin-top: 15px;
+}
+
+.foto-menu , .check {
+    display: none;
+}
+
+
+.lista{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito Sans', sans-serif;
+    gap: 100px;
+    font-size: 10px;
+    
+}
+.li-1,.li-2,.li-3{
+    border-right: solid 1px red;
+    padding-right: 10px;
+    
+}
+.li-4,.li-5,.li-6{
+    border-left: solid 1px red;
+    padding-left: 10px;
+}
+.container-list1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito Sans', sans-serif;
+    gap: 100px;
+    font-size: 10px;
+    border-bottom: white solid 1px;
+    padding-bottom: 20px ;
+}
+.container-list2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito Sans', sans-serif;
+    gap: 100px;
+    font-size: 10px;
+    border-bottom: white solid 1px;
+    padding-bottom: 20px ;
+}
+a{
+    color:#ba181b;
+}
+
+.sec-1{
+    background-image: url('imagenes/portada.png');
+    width: 70vw; 
+    height:540px; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    margin-bottom: 0;
+    margin-left: 415px;
+    margin-right: 0;
+    background-color: black;
+}
+
+.container-about{
+    position: absolute;
+    top: 35%;
+    left: 35px;
+    color: aliceblue;
+    background-color: none;
+    height: 60px;
+    width: 600px;    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-us{
+    font-size:50px;
+    color: #001d3d;
+}
+
+.p-about{
+    color: #fffed5;
+}
+
+
+.sec-2{
+    background-color: #0b090a;
+}
+
+.cont-1{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    width: 90vw;
+    width: 1100px;
+    margin-left: 100px;
+    
+}
+.card-1 > h3 ,
+.card-2 >h3 {
+    text-align: center;
+    color: #ae2012;
+    text-decoration: underline;
+    margin-bottom: 30px;
+
+}
+
+.img-2{
+    height: 160px;
+}
+
+
+.cont-2{
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    width: 90vw;
+    
+    
+}
+
+.img-3{
+    height: 160px;
+    padding-right: 0px;
+}
+
+.card-3{
+    margin-left: 200px;
+}
+.card-3 > h3 ,
+.card-4 > h3{
+    text-align: center;
+    color: #ae2012;
+    text-decoration: underline;
+    
+}
+
+.card-3 > p ,
+.card-4 > p{
+    margin-top: 30px;
+}
