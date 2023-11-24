@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const cervezasPorCategoria = {
         'Blonde Beer': [
-            { nombre: 'Cerveza1', imagen: './imagenes/Productos/birrajs1.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' },
-            { nombre: 'Cerveza2', imagen: './imagenes/Productos/birrajs2.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' },
-            { nombre: 'Cerveza3', imagen: './imagenes/Productos/birrajs3.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' },
-            { nombre: 'Cerveza4', imagen: './imagenes/Productos/birrajs4.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' }
+            { nombre: 'Golde apple', imagen: './imagenes/Productos/birrajs1.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' },
+            { nombre: 'Golden Shark', imagen: './imagenes/Productos/birrajs2.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' },
+            { nombre: 'Golden Melodi', imagen: './imagenes/Productos/birrajs3.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' },
+            { nombre: 'Golden four ', imagen: './imagenes/Productos/birrajs4.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' }
         ],
         'Ipa Beer': [
             { nombre: 'Cerveza5', imagen: './imagenes/Productos/birrajs4.png', descripcion: 'Nuestra Cerveza Rubia ofrece una experiencia equilibrada, con un cuerpo ligero que permite que los matices de malta y lúpulo' },
@@ -49,12 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function renderizarTarjeta(cerveza, index) {
         const tarjeta = document.createElement('div');
-        tarjeta.classList.add('produc-1');
+        tarjeta.classList.add('produc-1','mi-clase-adicional');
 
         const imagen = document.createElement('img');
         imagen.src = cerveza.imagen;
         imagen.alt = cerveza.nombre;
-        imagen.classList.add(`kol-${index}`);
+        imagen.classList.add(`kol-${index}`,'otra-clase-imagen');
 
         const titulo = document.createElement('h6');
         titulo.textContent = cerveza.nombre;
@@ -73,3 +73,52 @@ document.addEventListener('DOMContentLoaded', function () {
         contProduc.appendChild(tarjeta);
     }
 });
+
+
+        //Validacion de formulario
+
+        function enviarFormulario() {
+            // Obtener valores de los campos
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            // Validar campos
+            if (!nombre || !email || !telefono || !mensaje) {
+                alert('Por favor, complete todos los campos.');
+                return;
+            }
+
+            // Validar formato de email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor, ingrese un correo electrónico válido.');
+                return;
+            }
+
+            // Almacenar en localStorage
+            const formularioData = {
+                nombre,
+                email,
+                telefono,
+                mensaje,
+            };
+
+            // Convertir a JSON y almacenar
+            localStorage.setItem('formularioData', JSON.stringify(formularioData));
+
+            // Notificar éxito
+            alert('Formulario enviado correctamente.');
+
+            // Limpiar campos después del envío
+            limpiarCampos();
+        }
+
+        function limpiarCampos() {
+            // Limpiar campos del formulario
+            document.getElementById('nombre').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('telefono').value = '';
+            document.getElementById('mensaje').value = '';
+        }
