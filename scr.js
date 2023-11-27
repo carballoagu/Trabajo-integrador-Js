@@ -122,3 +122,29 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('telefono').value = '';
             document.getElementById('mensaje').value = '';
         }
+
+
+        // Carrito de compras 
+      
+        let carrito = [];
+    
+        function agregarAlCarrito(producto) {
+            carrito.push(producto);
+            actualizarCantidadCarrito();
+        }
+    
+        function actualizarCantidadCarrito() {
+            const cantidadCarrito = document.getElementById('cantidad-carrito');
+            cantidadCarrito.textContent = carrito.length;
+        }
+    
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('btn-comprar')) {
+                const producto = {
+                    nombre: event.target.getAttribute('data-nombre'),
+                };
+                agregarAlCarrito(producto);
+            }
+        });
+  
+    

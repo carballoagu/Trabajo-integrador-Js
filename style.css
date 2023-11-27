@@ -24,8 +24,23 @@
 .foto-menu , .check {
     display: none;
 }
-
-
+.carrito-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: -150px;
+    margin-left: 60px;
+}
+.carrito-icon{
+    height: 15px;
+    margin-bottom: 80px;
+    
+}
+.cantidad-carrito{
+    font-size: 5px;
+    margin-left: 6px;
+}
 .lista{
     display: flex;
     flex-direction: row;
