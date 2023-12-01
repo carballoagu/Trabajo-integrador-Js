@@ -1,0 +1,156 @@
+
+
+@media (max-width: 1380px){
+
+}
+
+
+
+
+@media (max-width: 1380px) {
+   
+   .container-list1,.container-list2{
+      gap: 30px;
+   }
+   .sec-1{
+      width: 60vw; 
+   }
+   .produc-1{
+      width: 300px;
+   }
+  
+ }
+
+ @media (max-width: 1380px){
+
+   .sec-1{
+      width: 60w; 
+   }
+
+   .container-about{
+      width: 300px;
+   }
+ }
+
+
+ @media (max-width: 1212px){
+
+   .contac{
+      width: 300px;
+   }
+
+
+   .mi-clase-adicional {
+      margin-left: 60px;
+   }
+   .card-2{
+      margin-right: 300px;
+   }
+ }
+
+ @media (max-width: 1212px){
+
+   .cont-produc{
+      flex-direction: column;
+   }
+   .sec-contac{
+      gap: 20px;
+      padding-left: 80px;
+   }
+ }
+
+ @media (max-width: 1212px){
+
+   .img-3{
+      display: none;
+   }
+
+
+ }
+
+
+ @media (max-width: 995px){
+  
+   .navbar-2{   /* Navbar-2 */ 
+      display: block;
+      background-color: black;
+  }
+.nav{
+   display: none;
+}
+
+*{
+   background-color: black;
+}
+                  /*Estilos Nav*/
+.navbar-2{
+   background:black;
+   height: 60px;
+   display: flex;
+   position: fixed;
+   align-items: center;
+} 
+
+.nav_items a{
+   margin: 15px;
+   color: white;
+   position: relative;
+   text-decoration: none;
+   background-color: black;
+}
+
+.nav_items a:hover::before{
+   width: 100% !important;
+}
+.nav_toggle{
+   display: none;
+}
+
+.nav_items{
+   position: fixed;
+   top: 60px;
+   left: 0;
+   background: black;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: -webkit-fill-available;
+   transform: translateX(-100%);
+   transition: 0.3s ease all;
+
+}
+.nav_items li{ text-align: center;}
+.nav_toggle{
+   display: flex !important;
+   flex-direction: column;                
+   margin-left: 0px;
+   background-color: black;
+}
+.nav_toggle span{
+   width: 30px;
+   height: 4px;
+   background: white;
+   margin-bottom: 5px;
+   border-radius: 2px;             
+   transform-origin: 5px 0px;
+   transition: all 0.2s linear;
+
+}
+.close span{
+   transform: rotate(45deg) translate(0px, 0px);
+}
+.close span:nth-child(2){
+   display: none;
+}
+.close span:nth-child(3){
+   transform: rotate(-45deg) translate(-5px, 1px);
+}
+.open{ transform: translateX(0) !important}
+.carrito-container{
+   display: block;
+}
+
+
+
+ }
+ 

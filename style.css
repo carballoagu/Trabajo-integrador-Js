@@ -9,13 +9,21 @@
    color: white;
    list-style: none;
 }
-                 /* Navbar */
+                 /* Navbar */ 
+
+.navbar-2{   /* Navbar-2 */ 
+    display: none;
+}
+
 .nav{
     background-color: #0b090a;
     position: fixed;
     width: 100%;
 }
-
+.menu-icon {
+    cursor: pointer;
+    display: none; /* Oculta el ícono en pantallas grandes */
+}
 .logo{
     height: 150px;
     margin-top: 15px;
@@ -198,6 +206,10 @@ a{
     color: white;
 
 }
+
+                        
+                /* Sec Prodoctos */
+
 .titulo-producto{
     color: #ff01fb;
     margin-top: 150px;
@@ -419,7 +431,7 @@ input , textarea{
 
 
 
-/* Java screapt */
+                /* Java screapt */
 
 .mi-clase-adicional {
   display: flex;
@@ -451,5 +463,8 @@ input , textarea{
 
 .mi-clase-adicional >button:hover{
     transform: scale(1.2);
-
 }
+
+
+
+  
