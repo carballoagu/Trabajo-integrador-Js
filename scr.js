@@ -153,3 +153,135 @@ document.addEventListener('DOMContentLoaded', function () {
             _items.classList.toggle("open")
         _toggle.classList.toggle("close")
         }
+
+
+
+        //Carrito
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tu código actual
+        
+            // Elementos del carrito
+            const carritoContainer = document.querySelector('.carrito-container');
+            const carritoIcon = document.querySelector('.carrito-icon');
+            const cantidadCarrito = document.querySelector('.cantidad-carrito');
+            
+            // Función para mostrar el carrito
+            function mostrarCarrito() {
+                carritoContainer.innerHTML = ''; // Limpiar contenido existente
+        
+                if (carrito.length > 0) {
+                    carrito.forEach(producto => {
+                        const itemCarrito = document.createElement('div');
+                        itemCarrito.classList.add('mi-clase-adicional');
+        
+                        const nombreProducto = document.createElement('p');
+                        nombreProducto.textContent = producto.nombre;
+        
+                        const botonEliminar = document.createElement('button');
+                        botonEliminar.textContent = 'Quitar';
+                        botonEliminar.addEventListener('click', function () {
+                            quitarDelCarrito(producto);
+                        });
+        
+                        itemCarrito.appendChild(nombreProducto);
+                        itemCarrito.appendChild(botonEliminar);
+        
+                        carritoContainer.appendChild(itemCarrito);
+                    });
+                } else {
+                    carritoContainer.innerHTML = '<p>No hay productos en el carrito.</p>';
+                }
+            }
+        
+            // Función para quitar un producto del carrito
+            function quitarDelCarrito(producto) {
+                const index = carrito.indexOf(producto);
+                if (index !== -1) {
+                    carrito.splice(index, 1);
+                    mostrarCarrito();
+                    actualizarCantidadCarrito();
+                }
+            }
+        
+            // Actualizar cantidad en el carrito después de quitar un producto
+            function actualizarCantidadCarrito() {
+                cantidadCarrito.textContent = carrito.length;
+            }
+        
+            // Evento clic en la imagen del carrito
+            carritoIcon.addEventListener('click', function () {
+                mostrarCarrito();
+                carritoContainer.classList.toggle('mostrar-carrito');
+            });
+        });
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+    // Tu código actual
+
+    // Elementos del carrito
+    const carritoContainer = document.querySelector('.carrito-container');
+    const carritoIcon = document.querySelector('.carrito-icon');
+    const cantidadCarrito = document.querySelector('.cantidad-carrito');
+
+    // Función para mostrar el carrito
+    function mostrarCarrito() {
+        carritoContainer.innerHTML = ''; // Limpiar contenido existente
+
+        if (carrito.length > 0) {
+            carrito.forEach(producto => {
+                const itemCarrito = document.createElement('div');
+                itemCarrito.classList.add('mi-clase-adicional');
+
+                const nombreProducto = document.createElement('p');
+                nombreProducto.textContent = producto.nombre;
+
+                const botonEliminar = document.createElement('button');
+                botonEliminar.textContent = 'Quitar';
+                botonEliminar.addEventListener('click', function () {
+                    quitarDelCarrito(producto);
+                });
+
+                itemCarrito.appendChild(nombreProducto);
+                itemCarrito.appendChild(botonEliminar);
+
+                carritoContainer.appendChild(itemCarrito);
+            });
+
+            // Agregar botón "Cerrar" al final del carrito
+            const cerrarCarritoBtn = document.createElement('button');
+            cerrarCarritoBtn.textContent = 'Cerrar';
+            cerrarCarritoBtn.classList.add('cerrar-carrito-btn');
+            cerrarCarritoBtn.addEventListener('click', function () {
+                cerrarCarrito();
+            });
+
+            carritoContainer.appendChild(cerrarCarritoBtn);
+        } else {
+            carritoContainer.innerHTML = '<p>No hay productos en el carrito.</p>';
+        }
+    }
+
+    // Función para cerrar el carrito
+    function cerrarCarrito() {
+        carritoContainer.classList.remove('mostrar-carrito');
+    }
+
+    // Resto del código
+
+    // Evento clic en el documento para cerrar el carrito
+    document.addEventListener('click', function (event) {
+        const carritoAbierto = carritoContainer.classList.contains('mostrar-carrito');
+        const clicDentroDelCarrito = carritoContainer.contains(event.target) || carritoIcon.contains(event.target);
+
+        if (carritoAbierto && !clicDentroDelCarrito) {
+            cerrarCarrito();
+        }
+    });
+});
+
+

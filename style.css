@@ -62,11 +62,13 @@
 .li-1,.li-2,.li-3{
     border-right: solid 1px red;
     padding-right: 10px;
+    font-size: 13px;
     
 }
 .li-4,.li-5,.li-6{
     border-left: solid 1px red;
     padding-left: 10px;
+    font-size: 13px;
 }
 .container-list1{
     display: flex;
@@ -467,4 +469,9 @@ input , textarea{
 
 
 
-  
+  .mostrar-carrito{
+        background-color: black;
+        position: absolute;
+        width: 500px;
+
+  }
